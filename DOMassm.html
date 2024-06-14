@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Book Addition</title>
+</head>
+<body>
+
+    <h1>Book List :</h1>
+    <ul id="book-list">
+        New book-lists:
+    </ul>
+   
+    <button onclick="addBook()">Add New Book</button>
+
+    <script>
+        function addBook() {
+           
+            const bookTitle = prompt("Enter the book title:");
+
+          
+            if (bookTitle) {
+                
+                const li = document.createElement("li");
+
+    
+                li.textContent = bookTitle;
+                document.getElementById("book-list").appendChild(li);
+            }
+        }
+    </script> 
+</body>
+</html>
